@@ -1,5 +1,5 @@
 # Stage prod-stage
-FROM golang:1.23.6 AS prod-stage 
+FROM golang:1.24.0 AS prod-stage 
 
 WORKDIR /app
 
@@ -20,7 +20,7 @@ ENTRYPOINT ["/api"]
 
 
 # Stage dev-stage: Development environment with air
-FROM golang:1.23.6 AS dev-stage
+FROM golang:1.24.0 AS dev-stage
 
 WORKDIR /app
 

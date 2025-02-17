@@ -1,6 +1,6 @@
 module github.com/beka-birhanu/vinom-matchmaking
 
-go 1.23.6
+go 1.24.0
 
 require (
 	github.com/beka-birhanu/vinom-api v1.0.0
