@@ -88,7 +88,6 @@ func (mm *Matchmaker) PushToQueue(ctx context.Context, id string, rank int32, la
 func (mm *Matchmaker) pushPlayerToQueue(ctx context.Context, player *player) error {
 	score := float64(time.Now().UnixNano())
 	err := mm.sortedQueue.Enqueue(ctx, mm.queueKey(player.Rank, player.Latency), score, player.ID)
-	mm.logger.Info(mm.queueKey(player.Rank, player.Latency))
 	if err != nil {
 		mm.logger.Error(fmt.Sprintf("Failed to enqueue player: %s", err))
 		return err
@@ -105,7 +104,6 @@ func (mm *Matchmaker) match(ctx context.Context, rank int32, latency int32) {
 
 	queueKey := mm.queueKey(rank, latency)
 	qLen, err := mm.sortedQueue.Count(newCtx, queueKey)
-	mm.logger.Info(queueKey)
 	if err != nil {
 		mm.logger.Error(fmt.Sprintf("Counting queue length: %s", err))
 		return

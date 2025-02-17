@@ -2,7 +2,7 @@
 // versions:
 // - protoc-gen-go-grpc v1.5.1
 // - protoc             v5.29.2
-// source: grpc.proto
+// source: matchmaking.proto
 
 package api
 
@@ -19,7 +19,7 @@ import (
 const _ = grpc.SupportPackageIsVersion9
 
 const (
-	Matchmaking_Match_FullMethodName = "/api.Matchmaking/Match"
+	Matchmaking_Match_FullMethodName = "/matchmaking.Matchmaking/Match"
 )
 
 // MatchmakingClient is the client API for Matchmaking service.
@@ -108,7 +108,7 @@ func _Matchmaking_Match_Handler(srv interface{}, ctx context.Context, dec func(i
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var Matchmaking_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "api.Matchmaking",
+	ServiceName: "matchmaking.Matchmaking",
 	HandlerType: (*MatchmakingServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -117,5 +117,5 @@ var Matchmaking_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "grpc.proto",
+	Metadata: "matchmaking.proto",
 }
