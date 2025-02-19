@@ -10,7 +10,7 @@ import (
 
 // Config holds the application's configuration values.
 type Config struct {
-	HostIP           string // Host IP for the server
+	ProxyIP          string // Host IP for the server
 	RedisHost        string // Hostname or IP address for the Redis server
 	RedisPort        int32  // Port number for the Redis server
 	MaxPlayer        int32  // Maximum number of players allowed in a game
@@ -32,7 +32,7 @@ func initConfig() Config {
 
 	// Populate the Config struct with required environment variables
 	return Config{
-		HostIP:           mustGetEnv("HOST_IP"),
+		ProxyIP:          mustGetEnv("PROXY_IP"),
 		RedisHost:        mustGetEnv("REDIS_HOST"),
 		RedisPort:        int32(mustGetEnvAsInt("REDIS_PORT")),
 		MaxPlayer:        int32(mustGetEnvAsInt("MAX_PLAYER")),

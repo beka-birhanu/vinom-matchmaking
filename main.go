@@ -7,8 +7,8 @@ import (
 	"os"
 	"time"
 
-	logger "github.com/beka-birhanu/vinom-api/infrastruture/log"
-	general_i "github.com/beka-birhanu/vinom-interfaces/general"
+	general_i "github.com/beka-birhanu/vinom-common/interfaces/general"
+	logger "github.com/beka-birhanu/vinom-common/log"
 	"github.com/beka-birhanu/vinom-matchmaking/api"
 	"github.com/beka-birhanu/vinom-matchmaking/config"
 	"github.com/beka-birhanu/vinom-matchmaking/infrastructure"
@@ -90,12 +90,13 @@ func main() {
 	initMatchmakingController()
 
 	var err error
-	grpcConnListener, err = net.Listen("tcp", fmt.Sprintf("%s:%v", config.Envs.HostIP, config.Envs.GrpcPort))
+	grpcConnListener, err = net.Listen("tcp", fmt.Sprintf("%s:%d", config.Envs.ProxyIP, config.Envs.GrpcPort))
 	if err != nil {
 		appLogger.Error(fmt.Sprintf("Listening tcp: %v", err))
 		os.Exit(1)
 	}
 
+	appLogger.Info(fmt.Sprintf("Serving gRPC at %s:%d", config.Envs.ProxyIP, config.Envs.GrpcPort))
 	if err := grpcServer.Serve(grpcConnListener); err != nil {
 		appLogger.Error(fmt.Sprintf("Serving gRPC: %v", err))
 		os.Exit(1)

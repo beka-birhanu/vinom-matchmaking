@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"time"
 
-	general_i "github.com/beka-birhanu/vinom-interfaces/general"
+	general_i "github.com/beka-birhanu/vinom-common/interfaces/general"
 	"github.com/beka-birhanu/vinom-matchmaking/service/i"
 	"github.com/google/uuid"
 )

@@ -1,5 +1,5 @@
-github.com/beka-birhanu/vinom-api v1.0.0 h1:zitkdPtaTnyovcH1fhlXHmes0K5GNVFQh7ljFghP9V8=
-github.com/beka-birhanu/vinom-api v1.0.0/go.mod h1:/YD3PahH3r/baltcZcHt8Sy5oeE9DsCrzr1ym40hKag=
+github.com/beka-birhanu/vinom-common v0.0.0-20250219120723-29393b8d60dc h1:83k4YYwUOFZhnF/IUosVGfY05U9bGezwbTyEK/3zEl0=
+github.com/beka-birhanu/vinom-common v0.0.0-20250219120723-29393b8d60dc/go.mod h1:5YQ9WWSIzfDCIeVls/RtHOZTIFrjhdAcxPQuvJQhjfE=
 github.com/beka-birhanu/vinom-interfaces v0.0.0-20250208062558-5610abbec85d h1:fvHHlVXEsO5auUzxHgyPJCKfBs7JScC91eWStBZPSnQ=
 github.com/beka-birhanu/vinom-interfaces v0.0.0-20250208062558-5610abbec85d/go.mod h1:riTs7QpVdiowdD9mWGLAYmQ5v0rguVIBzEo993rSTrQ=
 github.com/bsm/ginkgo/v2 v2.12.0 h1:Ny8MWAHyOepLGlLKYmXG4IEkioBysk6GpaRTLC8zwWs=
@@ -53,8 +53,8 @@ go.opentelemetry.io/otel/sdk/metric v1.32.0 h1:rZvFnvmvawYb0alrYkjraqJq0Z4ZUJAiy
 go.opentelemetry.io/otel/sdk/metric v1.32.0/go.mod h1:PWeZlq0zt9YkYAp3gjKZ0eicRYvOh1Gd+X99x6GHpCQ=
 go.opentelemetry.io/otel/trace v1.32.0 h1:WIC9mYrXf8TmY/EXuULKc8hR17vE+Hjv2cssQDe03fM=
 go.opentelemetry.io/otel/trace v1.32.0/go.mod h1:+i4rkvCraA+tG6AzwloGaCtkx53Fa+L+V8e9a7YvhT8=
-golang.org/x/net v0.32.0 h1:ZqPmj8Kzc+Y6e0+skZsuACbx+wzMgo5MQsJh9Qd6aYI=
-golang.org/x/net v0.32.0/go.mod h1:CwU0IoeOlnQQWJ6ioyFrfRuomB8GKF6KbYXZVyeXNfs=
+golang.org/x/net v0.35.0 h1:T5GQRQb2y08kTAByq9L4/bz8cipCdA8FbRTXewonqY8=
+golang.org/x/net v0.35.0/go.mod h1:EglIi67kWsHKlRzzVMUD93VMSWGFOMSZgxFjparz1Qk=
 golang.org/x/sync v0.11.0 h1:GGz8+XQP4FvTTrjZPzNKTMFtSXH80RAzG+5ghFPgK9w=
 golang.org/x/sync v0.11.0/go.mod h1:Czt+wKu1gCyEFDUtn0jG5QVvpJ6rzVqr5aXyt9drQfk=
 golang.org/x/sys v0.30.0 h1:QjkSwP/36a20jFYWkSue1YwXzLmsV5Gfq7Eiy72C1uc=
