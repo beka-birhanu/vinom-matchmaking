@@ -25,11 +25,15 @@ services:
       - /app/tmp 
     environment:
       PROXY_IP: ${PROXY_IP} 
+      GRPC_PORT: ${GRPC_PORT}
       REDIS_HOST: ${REDIS_HOST}
       REDIS_PORT: ${REDIS_PORT}
       MAX_PLAYER: ${MAX_PLAYER}
       RANK_TOLERANCE: ${RANK_TOLERANCE}
       LATENCY_TOLERANCE: ${LATENCY_TOLERANCE}
+      SESSION_PORT: ${SESSION_PORT}
+      SESSION_HOST: ${SESSION_HOST}
+
     networks:
       - redis_network
     depends_on:

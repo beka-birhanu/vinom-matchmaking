@@ -10,13 +10,16 @@ import (
 
 // Config holds the application's configuration values.
 type Config struct {
-	ProxyIP          string // Host IP for the server
-	RedisHost        string // Hostname or IP address for the Redis server
-	RedisPort        int32  // Port number for the Redis server
-	MaxPlayer        int32  // Maximum number of players allowed in a game
-	RankTolerance    int32  // Tolerance for player rank difference during matchmaking
-	LatencyTolerance int32  // Tolerance for latency (in milliseconds) during matchmaking
-	GrpcPort         int    // Port for the GRPC server
+	ProxyIP            string // Host IP for the server
+	RedisHost          string // Hostname or IP address for the Redis server
+	RedisPort          int32  // Port number for the Redis server
+	MaxPlayer          int32  // Maximum number of players allowed in a game
+	RankTolerance      int32  // Tolerance for player rank difference during matchmaking
+	LatencyTolerance   int32  // Tolerance for latency (in milliseconds) during matchmaking
+	GrpcPort           int    // Port for the GRPC server
+	SessionManagerHost string // Hostname or IP address for the session manager server
+	SessionManagerPort int    // Port number for the session manager server
+	RPCTimeout         int    // Timeout duration for rpc calles
 }
 
 // Envs holds the application's configuration loaded from environment variables.
@@ -32,13 +35,16 @@ func initConfig() Config {
 
 	// Populate the Config struct with required environment variables
 	return Config{
-		ProxyIP:          mustGetEnv("PROXY_IP"),
-		RedisHost:        mustGetEnv("REDIS_HOST"),
-		RedisPort:        int32(mustGetEnvAsInt("REDIS_PORT")),
-		MaxPlayer:        int32(mustGetEnvAsInt("MAX_PLAYER")),
-		RankTolerance:    int32(mustGetEnvAsInt("RANK_TOLERANCE")),
-		LatencyTolerance: int32(mustGetEnvAsInt("LATENCY_TOLERANCE")),
-		GrpcPort:         mustGetEnvAsInt("GRPC_PORT"),
+		ProxyIP:            mustGetEnv("PROXY_IP"),
+		RedisHost:          mustGetEnv("REDIS_HOST"),
+		RedisPort:          int32(mustGetEnvAsInt("REDIS_PORT")),
+		MaxPlayer:          int32(mustGetEnvAsInt("MAX_PLAYER")),
+		RankTolerance:      int32(mustGetEnvAsInt("RANK_TOLERANCE")),
+		LatencyTolerance:   int32(mustGetEnvAsInt("LATENCY_TOLERANCE")),
+		GrpcPort:           mustGetEnvAsInt("GRPC_PORT"),
+		SessionManagerHost: mustGetEnv("SESSION_HOST"),
+		SessionManagerPort: mustGetEnvAsInt("SESSION_PORT"),
+		RPCTimeout:         mustGetEnvAsInt("RPC_TIMEOUT"),
 	}
 }
 

@@ -2,7 +2,6 @@ package sortedqueue
 
 import (
 	"context"
-	"fmt"
 	"time"
 
 	"github.com/beka-birhanu/vinom-matchmaking/service/i"
@@ -75,6 +74,5 @@ func (rsq *RedisUniqueSortedQueue) Count(ctx context.Context, queueKey string) (
 		_, _ = mutex.Unlock()
 	}()
 
-	fmt.Println(rsq.client.ZCard(ctx, queueKey))
 	return rsq.client.ZCard(ctx, queueKey).Val(), nil
 }
