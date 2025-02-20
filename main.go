@@ -11,7 +11,7 @@ import (
 	logger "github.com/beka-birhanu/vinom-common/log"
 	"github.com/beka-birhanu/vinom-matchmaking/api"
 	"github.com/beka-birhanu/vinom-matchmaking/config"
-	"github.com/beka-birhanu/vinom-matchmaking/infrastructure"
+	"github.com/beka-birhanu/vinom-matchmaking/infrastructure/sortedqueue"
 	"github.com/beka-birhanu/vinom-matchmaking/service"
 	"github.com/beka-birhanu/vinom-matchmaking/service/i"
 	"github.com/redis/go-redis/v9"
@@ -40,7 +40,7 @@ func initRedis(ctx context.Context) {
 }
 
 func initMatchmaker(redisClient *redis.Client) {
-	sortedQueue, err := infrastructure.NewRedisUniqueSortedQueue(redisClient, 300)
+	sortedQueue, err := sortedqueue.NewRedisUniqueSortedQueue(redisClient, 300)
 	if err != nil {
 		appLogger.Error(fmt.Sprintf("Creating Redis sorted queue: %v", err))
 		os.Exit(1)
