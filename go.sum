@@ -1,7 +1,5 @@
-github.com/beka-birhanu/vinom-common v0.0.0-20250219120723-29393b8d60dc h1:83k4YYwUOFZhnF/IUosVGfY05U9bGezwbTyEK/3zEl0=
-github.com/beka-birhanu/vinom-common v0.0.0-20250219120723-29393b8d60dc/go.mod h1:5YQ9WWSIzfDCIeVls/RtHOZTIFrjhdAcxPQuvJQhjfE=
-github.com/beka-birhanu/vinom-interfaces v0.0.0-20250208062558-5610abbec85d h1:fvHHlVXEsO5auUzxHgyPJCKfBs7JScC91eWStBZPSnQ=
-github.com/beka-birhanu/vinom-interfaces v0.0.0-20250208062558-5610abbec85d/go.mod h1:riTs7QpVdiowdD9mWGLAYmQ5v0rguVIBzEo993rSTrQ=
+github.com/beka-birhanu/vinom-common v0.0.1 h1:S/hOipRHPTKsed3djkw7psKl0fvorJ8hkaXmNledVI0=
+github.com/beka-birhanu/vinom-common v0.0.1/go.mod h1:VE7I/muiqO3Z7IYxE5FBjZCwLuQmv/BlCWdfPeWwDt0=
 github.com/bsm/ginkgo/v2 v2.12.0 h1:Ny8MWAHyOepLGlLKYmXG4IEkioBysk6GpaRTLC8zwWs=
 github.com/bsm/ginkgo/v2 v2.12.0/go.mod h1:SwYbGRRDovPVboqFv0tPTcG1sN61LM1Z4ARdbAV9g4c=
 github.com/bsm/gomega v1.27.10 h1:yeMWxP2pV2fG3FgAODIY8EiRE3dy0aeFYt4l7wh6yKA=
